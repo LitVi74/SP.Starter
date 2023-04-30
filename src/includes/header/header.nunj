@@ -1,7 +1,34 @@
 {% from "../../components/menu/menu.nunj" import menu %}
+{% from "../../components/icon/icon.nunj" import icon %}
 
-<div class="header">
-	<div class="container">
-		{{ menu() }}
-	</div>
-</div>
+<header class="header">
+	<a href="index.html" class="header__logo">
+		{{ icon({
+			iconName: 'logo',
+			className: '',
+			attr: 'viewBox="0 0 89 30"'
+		}) }}
+	</a>
+
+	{{ menu() }}
+
+	<button class="header__btn">
+		{{ icon({
+			iconName: 'search',
+			attr: 'viewBox="0 0 24 24"'
+		}) }}
+	</button>
+
+	<button class="header__btn header__basket-btn">
+		{{ icon({
+			iconName: 'basket',
+			attr: 'viewBox="0 0 24 21"'
+		}) }}
+		<span>2</span>
+	</button>
+
+	<button class="header__btn header__menu-btn">
+		<div></div>
+	</button>
+
+</header>

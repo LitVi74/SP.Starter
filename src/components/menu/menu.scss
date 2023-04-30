@@ -1,0 +1,35 @@
+@use 'src/assets/styles/lib/media';
+
+.menu {
+  background-color: $bg-color;
+  display: flex;
+  gap: 16px;
+  flex-grow: 1;
+
+  &_active {
+    display: flex;
+  }
+
+  &_nonactive {
+    @include media.max-screen($tablet-screen) {
+      display: none;
+    }
+  }
+
+  @include media.max-screen($tablet-screen) {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+
+    padding: 8px;
+
+    flex-direction: column;
+    gap: 8px;
+
+    border: 1px solid $grey-01;
+    border-radius: 8px;
+
+    z-index: $main-index;
+  }
+
+}
