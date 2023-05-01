@@ -16,10 +16,10 @@
 
 		{% include '../includes/header/header.nunj' %}
 
-		<div class="wrapper">
+		<mani class="wrapper">
 			{% block content %}
 			{% endblock content %}
-		</div>
+		</mani>
 
 		{% block scripts %}
 			<script src="assets/js/bundle.js?hash"></script>

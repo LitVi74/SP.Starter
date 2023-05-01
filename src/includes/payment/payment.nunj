@@ -1,0 +1,5 @@
+{% set currentStep = 3 %}
+
+<acide class="payment">
+    {% include '../progress/progress.nunj' %}
+</acide>

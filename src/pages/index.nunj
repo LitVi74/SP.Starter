@@ -8,10 +8,9 @@
 {% block title %}HTML-Test{% endblock title %}
 
 {% block content %}
-
-
 	<div class="container">
 
+		{% include '../includes/payment/payment.nunj' %}
 		<div style="padding:20px 0;">
 			{{ button({
 				className: '',

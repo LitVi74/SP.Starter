@@ -1,0 +1,9 @@
+@use 'src/assets/styles/lib/media';
+
+.payment {
+  display: block;
+  padding: 60px 50px;
+  @include media.max-screen($tablet-screen + 1) {
+    padding: 60px 10px;
+  }
+}
