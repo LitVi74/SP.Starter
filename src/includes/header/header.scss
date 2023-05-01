@@ -75,7 +75,7 @@
 
     &:before,
     &:after,
-    div {
+    span {
       content: '';
 
       width: 100%;
@@ -86,7 +86,7 @@
     }
 
     &_active {
-      div {
+      span {
         transform: scale(0);
       }
 

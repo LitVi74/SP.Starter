@@ -28,7 +28,7 @@
 	</button>
 
 	<button class="header__btn header__menu-btn">
-		<div></div>
+		<span></span>
 	</button>
 
 </header>
