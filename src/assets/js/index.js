@@ -15,8 +15,11 @@ class ProjectApp {
 		this.utils = require('./utils/utils').default;
 		this.classes = {
 			// Signal: require('./classes/Signal').default,
+			HeaderActive: require('./classes/HeaderActions').default,
 		};
-		this.components = {};
+		this.components = {
+			header: require('./components/header').default,
+		};
 		this.helpers = {};
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +29,7 @@ class ProjectApp {
 }
 
 global.ProjectApp = new ProjectApp();
+global.ProjectApp.components.header();
 
 if (module.hot) {
 	module.hot.accept();

@@ -10,6 +10,10 @@
 
   border-bottom: 1px solid $grey-01;
 
+  @include media.min-screen($tablet-screen) {
+    padding: 23px 30px;
+  }
+
   &__logo {
     display: block;
     height: 32px;
