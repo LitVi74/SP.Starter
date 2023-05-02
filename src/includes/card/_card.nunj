@@ -1,0 +1,27 @@
+<div class="card">
+    <label class="card__label">
+        <span>Name on card</span>
+        <input type="text" class="i-text" placeholder="Placeholder Text">
+    </label>
+
+    <label class="card__label">
+        <span>Card number</span>
+        <div class="card__input-group">
+            <input type="text" class="i-text">
+            <input type="text" class="i-text">
+            <input type="text" class="i-text">
+            <input type="text" class="i-text">
+        </div>
+    </label>
+
+    <div class="card__input-group">
+        <label class="card__label">
+            <span>Expire date</span>
+            <input type="text" class="i-text">
+        </label>
+        <label class="card__label">
+            <span class="card__label--cvv">CVV code</span>
+            <input type="text" class="i-text">
+        </label>
+    </div>
+</div>

@@ -2,4 +2,6 @@
 
 <acide class="payment">
     {% include '../progress/progress.nunj' %}
+
+    {% include '../billing/billing.nunj' %}
 </acide>

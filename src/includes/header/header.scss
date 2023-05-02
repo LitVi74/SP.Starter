@@ -8,7 +8,7 @@
   justify-content: flex-start;
   gap: 26px;
 
-  border-bottom: 1px solid $grey-01;
+  border-bottom: 1px solid $grey-02;
 
   @include media.min-screen($tablet-screen) {
     padding: 23px 30px;

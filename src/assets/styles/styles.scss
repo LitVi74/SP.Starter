@@ -1,5 +1,6 @@
 // ======= GLOBAL =======
 @import 'constants';
+@import 'controls';
 @import 'lib/base';
 @import 'fonts';
 @import 'reset';
@@ -15,6 +16,8 @@
 @import '../../includes/header/header';
 @import '../../includes/payment/payment';
 @import '../../includes/progress/progress';
+@import '../../includes/billing/billing';
+@import '../../includes/card/card';
 
 // ======= PAGES =======
 @import 'pages/main';

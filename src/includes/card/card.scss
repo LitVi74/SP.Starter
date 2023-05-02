@@ -1,0 +1,60 @@
+@use 'src/assets/styles/lib/media';
+
+.card {
+  margin-top: 20px;
+
+  max-width: 550px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media.min-screen($tablet-screen) {
+    margin-top: 44px;
+    padding: 20px 30px 46px;
+
+    border: 1px solid $grey-02;
+    border-radius: 5px;
+    box-shadow: 0 0 32px rgba($main-text-color, 0.19);
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $grey-01;
+
+    &--cvv {
+      position: relative;
+
+      &:after {
+        content: '?';
+        position: absolute;
+        top: 0;
+        left: calc(100% + 5px);
+
+        width: 13px;
+        height: 13px;
+
+        background: $grey-04;
+        border-radius: 50%;
+
+        text-align: center;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13px;
+        color: $main-text-color;
+      }
+    }
+  }
+
+  &__input-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+
+    @include media.min-screen($tablet-screen) {
+      grid-gap: 30px;
+    }
+  }
+}

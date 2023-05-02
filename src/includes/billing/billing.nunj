@@ -1,0 +1,51 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/button/button.nunj" import button %}
+
+<aside class="billing">
+    <h1 class="billing__header">Billing Information</h1>
+    <form class="billing__radio">
+        <label class="billing__radio--label">
+            <input type="radio" name="radio" class="i-radio" checked>
+            <span>Pay with Credit Card</span>
+        </label>
+        <label class="billing__radio--label">
+            <input type="radio" name="radio" class="i-radio">
+            {{ icon({
+                iconName: 'PayPal',
+                className: 'billing__radio--paypal-icon',
+                attr: 'viewBox="0 0 85 23"'
+            }) }}
+        </label>
+    </form>
+
+    <form>
+        {% include '../card/_card.nunj' %}
+
+        <div class="billing__agreement">
+            <label class="billing__agreement--label">
+                <input type="checkbox" class="i-checkbox">
+                <span>Save information of this credit card</span>
+            </label>
+
+            <label class="billing__agreement--label">
+                <input type="checkbox" class="i-checkbox">
+                <span>
+                    I accept the <a href="#" class="billing__agreement--link">terms and comditions</a> and the <a href="#" class="billing__agreement--link">Privacy Policies</a>
+                </span>
+            </label>
+        </div>
+
+        <div class="billing__button-group">
+            {{ button({
+                children: 'Back'
+            }) }}
+
+            {{ button({
+                children: 'Check Out',
+                mode: 'primary',
+                type: 'submit'
+            }) }}
+        </div>
+    </form>
+
+</aside>

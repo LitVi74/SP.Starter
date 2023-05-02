@@ -1,10 +1,15 @@
 .i-text {
 	display: block;
 	width: 100%;
-	padding: 5px;
-	/* Turn off iPhone/Safari input element rounding: */
-	-webkit-appearance: none;
-	border-radius: 0;
+	padding: 8px 10px;
+
+	border: none;
+	border-radius: 3px;
+	background-color: $grey-04;
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 .i-select {
@@ -22,10 +27,71 @@
 	overflow: auto;
 }
 
-.i-radio {
-	position: relative;
+.i-radio[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	display: block;
+	width: 18px;
+	height: 18px;
+
+	cursor: pointer;
+
+	border: 1px solid $grey-02;
+	border-radius: 50%;
+	background: transparent;
+
+	&:after {
+		content: '';
+		position: relative;
+		display: block;
+		width: 8px;
+		height: 8px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		border-radius: 50%;
+
+		background: transparent;
+	}
+
+	&:checked {
+		&:after {
+			background: $main-color;
+		}
+	}
 }
 
-.i-checkbox {
-	position: relative;
+.i-checkbox[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	display: block;
+	width: 18px;
+	height: 18px;
+
+	cursor: pointer;
+
+	border: 1px solid $grey-02;
+	background: transparent;
+
+	&:after {
+		content: '';
+		position: relative;
+		display: block;
+		width: 8px;
+		height: 8px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		background: transparent;
+	}
+
+	&:checked {
+		&:after {
+			background: $main-color;
+		}
+	}
 }

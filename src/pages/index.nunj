@@ -11,25 +11,6 @@
 	<div class="container">
 
 		{% include '../includes/payment/payment.nunj' %}
-		<div style="padding:20px 0;">
-			{{ button({
-				className: '',
-				children: 'Buy something',
-				chevronRight: true
-			}) }}
-		</div>
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример использования циклов и функции range():</h2>
-
-			<div class="row">
-				{% for i in range(1, 13)  %}
-					<span>{{ i }}</span>
-				{% endfor %}
-			</div>
-
-		</div>
 
 		<div style="padding:20px 0;">
 

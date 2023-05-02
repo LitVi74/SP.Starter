@@ -1,0 +1,101 @@
+@use 'src/assets/styles/lib/media';
+
+.billing {
+  max-width: 690px;
+  margin-top: 25px;
+
+  @include media.min-screen($desktop-hd-screen){
+    margin-left: 15vw;
+  }
+
+  &__header {
+    font-size: 18px;
+    font-weight: 700;
+
+    @include media.min-screen($tablet-screen) {
+      margin-left: 30px;
+    }
+  }
+
+  &__radio {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+
+
+    @include media.min-screen($tablet-screen) {
+      margin-top: 40px;
+      margin-left: 30px;
+
+      gap: 82px;
+    }
+
+    &--label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+
+      cursor: pointer;
+    }
+
+    &--paypal-icon {
+      margin: 0 5px;
+      width: 85px;
+      height: 23px;
+    }
+  }
+
+  &__agreement {
+    margin-top: 36px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    @include media.min-screen($tablet-screen) {
+      margin-top: 40px;
+      margin-left: 30px;
+    }
+
+    &--label {
+      display: flex;
+      align-items: self-start;
+      gap: 8px;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $grey-05;
+
+      cursor: pointer;
+
+      span {
+        width: 75%;
+      }
+    }
+
+    &--link {
+      text-decoration: none;
+      color: $main-text-color;
+    }
+  }
+
+  &__button-group {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include media.min-screen($tablet-screen) {
+
+      margin: 40px 30px 0;
+    }
+  }
+}
