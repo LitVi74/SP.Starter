@@ -1,35 +1,42 @@
 @use 'src/assets/styles/lib/media';
 
 .menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 16px;
+
+  padding: 8px;
+
+  flex-direction: column;
+  gap: 8px;
+
   background-color: $bg-color;
-  display: flex;
-  gap: 16px;
-  flex-grow: 1;
+  border: 1px solid $grey-02;
+  border-radius: 8px;
+
+  z-index: $main-index;
+
+  @include media.min-screen($tablet-screen) {
+    position: static;
+
+    border: none;
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-grow: 1;
+  }
 
   &_active {
     display: flex;
   }
 
   &_nonactive {
-    @include media.max-screen($tablet-screen) {
-      display: none;
+    display: none;
+
+    @include media.min-screen($tablet-screen) {
+      display: flex;
     }
   }
-
-  @include media.max-screen($tablet-screen) {
-    position: absolute;
-    top: 60px;
-    right: 16px;
-
-    padding: 8px;
-
-    flex-direction: column;
-    gap: 8px;
-
-    border: 1px solid $grey-02;
-    border-radius: 8px;
-
-    z-index: $main-index;
-  }
-
 }
