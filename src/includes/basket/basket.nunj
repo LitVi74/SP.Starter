@@ -1,0 +1,37 @@
+{% from "../../components/goods/goods.nunj" import goods %}
+{% from "../../components/button/button.nunj" import button %}
+
+<aside class="basket">
+    <section class="basket__section">
+        <h1 class="basket__section--title">My basket</h1>
+        <div class="basket__section--goods">
+            {% for goodsItem in basketGoods %}
+                {{ goods(goodsItem) }}
+            {% endfor %}
+        </div>
+    </section>
+    <section class="basket__section">
+        <h1 class="basket__section--title">Promo code</h1>
+        <div  class="basket__section--promo-code">
+            <input type="text" class="i-text" placeholder="Placeholder Text">
+            {{ button({
+                children: 'Apply',
+                mode: 'primary'
+            }) }}
+        </div>
+    </section>
+    <section class="basket__section">
+        <div class="basket__section--sub-sum">
+            <span>Subtotal</span><span>$1050</span>
+        </div>
+        <div class="basket__section--sub-sum">
+            <span>Tax</span><span>$100</span>
+        </div>
+        <div class="basket__section--sub-sum">
+            <span>Shipping</span><span>$150</span>
+        </div>
+        <div class="basket__section--sum">
+            <span>Total</span><span>$1300</span>
+        </div>
+    </section>
+</aside>

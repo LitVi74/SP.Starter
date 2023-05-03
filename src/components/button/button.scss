@@ -14,13 +14,10 @@
 	font-size: 14px;
 	line-height: 24px;
 
-	--button-color: $bg-color;
-
 	&_primary {
 		border: none;
 		background: $main-color;
 		color: $bg-color;
-		--button-color: $main-color;
 	}
 
 	&:hover {

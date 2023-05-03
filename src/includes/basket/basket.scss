@@ -1,0 +1,58 @@
+@use 'src/assets/styles/lib/media';
+
+.basket {
+  display: none;
+
+  @include media.min-screen($desktop-screen) {
+
+    display: block;
+    width: 410px;
+
+    border-left: 1px solid $grey-03;
+  }
+
+  &__section {
+    padding: 40px;
+    border-bottom: 1px solid $grey-03;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    &--goods {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &--promo-code {
+      display: flex;
+      gap: 10px;
+    }
+
+    &--sub-sum {
+      display: flex;
+      justify-content: space-between;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 34px;
+    }
+
+    &--sum {
+      display: flex;
+      justify-content: space-between;
+
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 34px;
+    }
+  }
+}

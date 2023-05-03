@@ -1,0 +1,16 @@
+{% macro goods(props) %}
+    {% set src = 'assets/images/sprites/' + props.sprite + '.webp' %}
+    {% set srcset = 'assets/images/sprites/' + props.sprite + '@2x.webp' %}
+
+    <div class="goods">
+        <img class="goods__image" src="{{ src }}" srcset="{{ srcset }} 2x" alt="props.sprite">
+        <a class="goods__title" href="#">{{ props.name }}</a>
+        <label class="goods__price">
+            <button class="i-number--minus"> - </button>
+            <input class="i-number" type="number" value="{{ props.count }}"/>
+            <button class="i-number--plus"> + </button>
+            <span>${{ props.price * props.count }}</span>
+        </label>
+        <button class="goods__delete-rtn"></button>
+    </div>
+{% endmacro %}

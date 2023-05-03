@@ -16,7 +16,7 @@
 
 		{% include '../includes/header/header.nunj' %}
 
-		<mani class="wrapper">
+		<mani class="wrapper" style="display: flex; flex-grow: 1">
 			{% block content %}
 			{% endblock content %}
 		</mani>

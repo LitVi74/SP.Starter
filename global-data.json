@@ -13,14 +13,20 @@
 			"path": "#"
 		}
 	],
-	"someData": [
+	"basketGoods": [
 		{
-			"title": "Item 1",
-			"text": "Desc 1"
+			"id": "goods_1",
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"sprite": "jacket",
+			"price": 525,
+			"count": 1
 		},
 		{
-			"title": "Item 2",
-			"text": "Desc 2"
+			"id": "goods_2",
+			"name": "Amet minim mollit non",
+			"sprite": "sneakers",
+			"price": 525,
+			"count": 1
 		}
 	]
 }
