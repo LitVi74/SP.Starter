@@ -14,7 +14,7 @@
     "eslint": "eslint ./src/assets/js/**/*.js --fix",
     "lint": "npm run prettier && npm run eslint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
