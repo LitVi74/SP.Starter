@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HTML-Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <script type="text/javascript">!function(){function e(e){return r.indexOf(e)>-1}function o(e){return a.indexOf(e)>-1}function n(e){return s.indexOf(e)>-1}var i=[],t=navigator,r=t.platform.toLowerCase(),a=t.userAgent.toLowerCase(),s=t.appName.toLowerCase(),d=document.documentElement,c=(localStorage,o("iphone")||o("ipod")||o("ipad")||o("android")||o("iemobile")||o("blackberry")||o("bada")?"_mobile":"_desktop");i.push(c);var m="";o("ipad")||o("iphone")||o("ipod")?m="_ios":o("android")?m="_android":e("win")?m="_win":e("mac")?m="_mac":e("linux")&&(m="_linux"),i.push(m);var u="";o("firefox")?u="_ff":o("opr")?u="_opera":o("yabrowser")?u="_yandex":o("edge")?u="_edge":o("trident")||n("explorer")||n("msie")?u="_ie":o("safari")&&!o("chrome")?u="_safari":o("chrome")&&(u="_chrome"),i.push(u),window.environmentObject={platform:c,os:m,browser:u,isLocal:0==window.location.href.indexOf("http://localhost:")},d.className+=" "+i.join(" ");var l=new XMLHttpRequest;l.open("GET","assets/svg/sprite.svg",!0),l.overrideMimeType("image/svg+xml"),l.onreadystatechange=function(){function e(){if(document.body){var o=document.querySelector(".invisible-container");o||(o=document.createElement("div"),o.className="invisible-container",document.body.insertBefore(o,document.body.firstChild)),o.appendChild(l.responseXML.documentElement)}else setTimeout(e,16)}l.readyState===XMLHttpRequest.DONE&&200===l.status&&e()},l.send("")}();</script>
+
+    <link rel="stylesheet" href="assets/css/styles.css?4b8d091f304c3a5ae2c52727707c0c7c" />
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <svg viewBox="0 0 89 30">
+                <use xlink:href="#icon-logo" />
+            </svg>
+
+        </a>
+
+        <nav class="menu menu_nonactive">
+            <a href="#" class="menu__item _active">Menu Item 1</a>
+            <a href="#" class="menu__item _active">Menu Item 2</a>
+            <a href="#" class="menu__item _active">Menu Item 3</a>
+        </nav>
+
+        <button class="header__btn">
+            <svg viewBox="0 0 24 24">
+                <use xlink:href="#icon-search" />
+            </svg>
+
+        </button>
+
+        <button class="header__btn header__basket-btn">
+            <svg viewBox="0 0 24 21">
+                <use xlink:href="#icon-basket" />
+            </svg>
+
+            <span>2</span>
+        </button>
+
+        <button class="header__btn header__menu-btn">
+            <span></span>
+        </button>
+
+    </header>
+
+    <mani class="wrapper" style="display: flex; flex-grow: 1">
+
+        <acide class="payment">
+            <section class="progress">
+                <div class="progress__step progress__step_previous
+">
+                    <span class="progress__step--number">
+                        1
+                    </span>
+                    <span class="progress__step--name">
+                        Account
+                    </span>
+                </div>
+                <span class="progress__line  "></span>
+                <div class="progress__step progress__step_previous
+">
+                    <span class="progress__step--number">
+                        2
+                    </span>
+                    <span class="progress__step--name">
+                        Shipping
+                    </span>
+                </div>
+                <span class="progress__line  "></span>
+                <div class="progress__step progress__step_active
+">
+                    <span class="progress__step--number">
+                        3
+                    </span>
+                    <span class="progress__step--name">
+                        Billing
+                    </span>
+                </div>
+                <span class="progress__line progress__line--next "></span>
+                <div class="progress__step progress__step_next">
+                    <span class="progress__step--number">
+                        4
+                    </span>
+                    <span class="progress__step--name">
+                        Review
+                    </span>
+                </div>
+            </section>
+
+            <aside class="billing">
+                <h1 class="billing__header">Billing Information</h1>
+                <form class="billing__radio">
+                    <label class="billing__radio--label">
+                        <input type="radio" name="radio" class="i-radio" checked>
+                        <span>Pay with Credit Card</span>
+                    </label>
+                    <label class="billing__radio--label">
+                        <input type="radio" name="radio" class="i-radio">
+                        <svg class="billing__radio--paypal-icon" viewBox="0 0 85 23">
+                            <use xlink:href="#icon-PayPal" />
+                        </svg>
+
+                    </label>
+                </form>
+
+                <form>
+                    <div class="card">
+                        <label class="card__label">
+                            <span>Name on card</span>
+                            <input type="text" class="i-text" placeholder="Placeholder Text">
+                        </label>
+
+                        <label class="card__label">
+                            <span>Card number</span>
+                            <div class="card__input-group">
+                                <input type="text" class="i-text">
+                                <input type="text" class="i-text">
+                                <input type="text" class="i-text">
+                                <input type="text" class="i-text">
+                            </div>
+                        </label>
+
+                        <div class="card__input-group">
+                            <label class="card__label">
+                                <span>Expire date</span>
+                                <input type="text" class="i-text">
+                            </label>
+                            <label class="card__label">
+                                <span class="card__label--cvv">CVV code</span>
+                                <input type="text" class="i-text">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="billing__agreement">
+                        <label class="billing__agreement--label">
+                            <input type="checkbox" class="i-checkbox">
+                            <span>Save information of this credit card</span>
+                        </label>
+
+                        <label class="billing__agreement--label">
+                            <input type="checkbox" class="i-checkbox">
+                            <span>
+                                I accept the <a href="#" class="billing__agreement--link">terms and comditions</a> and the <a href="#" class="billing__agreement--link">Privacy Policies</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="billing__button-group">
+                        <button class="button
+" type=" button ">
+                            Back
+                        </button>
+
+                        <button class="button
+		button_primary
+" type="submit">
+                            Check Out
+                        </button>
+
+                    </div>
+                </form>
+
+            </aside>
+        </acide>
+
+        <aside class="basket">
+            <section class="basket__section">
+                <h1 class="basket__section--title">My basket</h1>
+                <div class="basket__section--goods">
+
+                    <div class="goods" id="goods_1">
+                        <img class="goods__image" src="assets/images/sprites/jacket.webp" srcset="assets/images/sprites/jacket@2x.webp 2x" alt="props.sprite">
+                        <a class="goods__title" href="#">Amet minim mollit non deserunt ullamco est sit</a>
+                        <label class="goods__price">
+                            <button class="i-number--minus"> - </button>
+                            <input class="i-number" type="number" value="1" />
+                            <button class="i-number--plus"> + </button>
+                            <span class="goods__price--sum">$525</span>
+                        </label>
+                        <button class="goods__delete-btn"></button>
+                    </div>
+
+                    <div class="goods" id="goods_2">
+                        <img class="goods__image" src="assets/images/sprites/sneakers.webp" srcset="assets/images/sprites/sneakers@2x.webp 2x" alt="props.sprite">
+                        <a class="goods__title" href="#">Amet minim mollit non</a>
+                        <label class="goods__price">
+                            <button class="i-number--minus"> - </button>
+                            <input class="i-number" type="number" value="1" />
+                            <button class="i-number--plus"> + </button>
+                            <span class="goods__price--sum">$525</span>
+                        </label>
+                        <button class="goods__delete-btn"></button>
+                    </div>
+
+                </div>
+            </section>
+            <section class="basket__section">
+                <h1 class="basket__section--title">Promo code</h1>
+                <div class="basket__section--promo-code">
+                    <input type="text" class="i-text" placeholder="Placeholder Text">
+                    <button class="button
+		button_primary
+" type=" button ">
+                        Apply
+                    </button>
+
+                </div>
+            </section>
+            <section class="basket__section">
+                <div class="basket__section--sub-sum">
+                    <span>Subtotal</span><span id="sub-sum">$1050</span>
+                </div>
+                <div class="basket__section--sub-sum">
+                    <span>Tax</span><span>$100</span>
+                </div>
+                <div class="basket__section--sub-sum">
+                    <span>Shipping</span><span>$150</span>
+                </div>
+                <div class="basket__section--sum">
+                    <span>Total</span><span id="total-sum">$1300</span>
+                </div>
+            </section>
+        </aside>
+    </mani>
+
+    <script src="assets/js/bundle.js?546baf287c17cab1731a651433e6701b"></script>
+</body>
+
+</html>
