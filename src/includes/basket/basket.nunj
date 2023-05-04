@@ -1,13 +1,28 @@
 {% from "../../components/goods/goods.nunj" import goods %}
 {% from "../../components/button/button.nunj" import button %}
 
+{% set subtotal = 1050 %}
+{% set tax = 100 %}
+{% set shipping = 150 %}
+
 <aside class="basket">
     <section class="basket__section">
         <h1 class="basket__section--title">My basket</h1>
         <div class="basket__section--goods">
-            {% for goodsItem in basketGoods %}
-                {{ goods(goodsItem) }}
-            {% endfor %}
+            {{ goods({
+                id: 'goods_1',
+                name: 'Amet minim mollit non deserunt ullamco est sit',
+                sprite: 'jacket',
+                price: 525,
+                count: 1
+            }) }}
+            {{ goods({
+                id: 'goods_2',
+                name: 'Amet minim mollit non',
+                sprite: 'sneakers',
+                price: 525,
+                count: 1
+            }) }}
         </div>
     </section>
     <section class="basket__section">
@@ -22,16 +37,16 @@
     </section>
     <section class="basket__section">
         <div class="basket__section--sub-sum">
-            <span>Subtotal</span><span>$1050</span>
+            <span>Subtotal</span><span id="sub-sum">${{ subtotal }}</span>
         </div>
         <div class="basket__section--sub-sum">
-            <span>Tax</span><span>$100</span>
+            <span>Tax</span><span>${{ tax }}</span>
         </div>
         <div class="basket__section--sub-sum">
-            <span>Shipping</span><span>$150</span>
+            <span>Shipping</span><span>${{ shipping }}</span>
         </div>
         <div class="basket__section--sum">
-            <span>Total</span><span>$1300</span>
+            <span>Total</span><span id="total-sum">${{ subtotal + tax + shipping }}</span>
         </div>
     </section>
 </aside>
